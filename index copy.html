@@ -130,37 +130,56 @@
 
 
                 </div>
-                <h2><a href="/news/" style="color: inherit">🔔 Updates 🔔</a></h2>
+                <h2> <a href="/news/" style="color: inherit">🔔 Updates 🔔</a> </h2>
                 <div class="news" style="height:200px;overflow:auto;">
                     <div class="table-responsive">
-                        <table class="table table-sm table-borderless" id="news-table">
-                            <!-- News updates will be dynamically loaded here -->
+                        <table class="table table-sm table-borderless">
+                            <tr>
+                                <th scope="row" style="width: 20%">Aug 12, 2024</th>
+                                <td> One paper got accepted in Q1 journal <a href="https://link.springer.com/article/10.1007/s10462-024-10817-z"> Artificial Intelligence Review!</a> </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" style="width: 20%">May 10, 2024</th>
+                                <td> Completed my first semester with GPA 4.0 </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" style="width: 20%">Jan 08, 2024</th>
+                                <td> I started my PhD @ USF, under Prof. Raiyan Abdul Baten. <img class="emoji"
+                                        title=":sparkles:" alt=":sparkles:"
+                                        src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png"
+                                        height="20" width="20"> <img class="emoji" title=":smile:" alt=":smile:"
+                                        src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png"
+                                        height="20" width="20"> </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" style="width: 20%">Jan 07, 2024</th>
+                                <td> One paper got accepted in Q1 journal <a href="https://ieeexplore.ieee.org/abstract/document/10399807"> IEEE
+                                        Access!</a> </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" style="width: 20%">Dec 20, 2023</th>
+                                <td> I got my USA visa!! </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" style="width: 20%">Nov 13, 2023</th>
+                                <td> One paper got accepted in <a href="https://ieeexplore.ieee.org/abstract/document/10441417"> ICCIT 2023!</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" style="width: 20%">Nov 01, 2023</th>
+                                <td> I received a fully-funded PhD offer from USF. </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" style="width: 20%">Aug 11, 2023</th>
+                                <td> I started my job as RA at MIST, under Prof. Nazrul Islam. </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" style="width: 20%">May 24, 2023</th>
+                                <td> I graduated my BSc. from IUT. </td>
+                            </tr>
                         </table>
                     </div>
                 </div>
-
-                <script>
-                    // Load latest news and append it to the table
-                    function loadLatestNews() {
-                        fetch('/news/latest.json')
-                            .then(response => response.json())
-                            .then(data => {
-                                const newsTable = document.getElementById('news-table');
-                                data.forEach(news => {
-                                    const row = document.createElement('tr');
-                                    row.innerHTML = `
-                                        <th scope="row" style="width: 20%">${news.date}</th>
-                                        <td>${news.content}</td>`;
-                                    // Prepend the latest news to the top
-                                    newsTable.prepend(row);
-                                });
-                            })
-                            .catch(error => console.error('Error loading news:', error));
-                    }
-
-                    // Load the latest news on page load
-                    window.onload = loadLatestNews;
-                </script>
 
             </article>
         </div>
